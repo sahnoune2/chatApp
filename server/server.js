@@ -33,4 +33,4 @@ const server = http.createServer(app);
 initialization(server);
 
 connectDB();
-app.listen(port, console.log("server is running"));
+server.listen(port, console.log("server is running"));

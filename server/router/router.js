@@ -3,6 +3,7 @@ const passport = require("passport");
 const jwt = require("jsonwebtoken");
 const { auth } = require("../auth/isAuth");
 const { getCurrent, getAllUsers } = require("../controller/userControl");
+const getMessage = require("../controller/messageControl");
 
 const userRouter = express.Router();
 
@@ -34,5 +35,6 @@ userRouter.get(
 );
 userRouter.get("/profile", auth, getCurrent);
 userRouter.get("/allusers", getAllUsers);
+userRouter.get("/message/:senderID/:recieverID", getMessage);
 
 module.exports = userRouter;

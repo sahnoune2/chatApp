@@ -24,7 +24,7 @@ function App() {
       path: "/",
       element: (
         <>
-          <Header /> <Outlet /> <Footer className="mt-[100vh]" />
+          <Header /> <Outlet /> <Footer />
           <ToastContainer position="top-right" />
         </>
       ),
